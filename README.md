@@ -1,36 +1,43 @@
 # Automation-Python-and-Robot-Framework
 
+Quality Guardian Mentorship PRO Robot + Python + Selenium module repository offered by Lumestack. This project utilize Robot + Python + Selenium to automate Login Feature of [Swag Labs](https://www.saucedemo.com/). Robot Framework is a versatile automation framework that allows developers to write readable and reusable test cases for end-to-end testing across different browsers and platforms.
+
 ## Setup
 
-- Para execução das suítes de testes automatizados é necessário que você tenha as seguintes ferramentas instaladas:
+- To run the automated test suite you must have the following tools installed:
 
   - [Google Chrome](https://www.google.com/intl/pt-BR/chrome/)
   - [Git](https://git-scm.com/downloads)
   - [Python](https://www.python.org/downloads/)
-  - [Postman](https://www.postman.com/downloads/)
 
-1. Clone esse repositório usando um terminal com o seguinte comando:
+1. Clone this repository using a terminal with the following command:
 
    ```bash
    git clone https://github.com/s4imu/Automation-Python-and-Robot-Framework.git
    ```
 
-2. Acesse o repositório com o seguinte comando:
+2. Access the repository with the following command:
    ```bash
    cd Automation-Python-and-Robot-Framework/
    ```
-3. Crie o virtual enviroment para os testes que utilizam python com o seguinte comando:
+3. Create the virtual environment for tests using python with the following command:
 
    ```bash
    python -m venv venv
    ```
 
-4. Ative o virtual enviroment com o seguinte comando:
+4. Active virtual environment with the following command:
    ```bash
    source venv\Scripts\activate
    ```
-5. Instale as dependências
+5. Install dependencies:
 
    ```bash
    pip install robotframework && pip install --upgrade robotframework-seleniumlibrary && pip install webdriver-manager
+   ```
+
+6. Run the test suite
+
+   ```bash
+   robot test/login_steps.robot
    ```
