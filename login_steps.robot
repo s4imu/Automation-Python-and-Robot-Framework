@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Test Cases ***
-Successful_Login
+TC01-Successful Login
     Open Browser    url=https://www.saucedemo.com/    browser=chrome
     Wait Until Element Is Visible    css=[data-test*='login-container']
     Input Text    id=user-name    standard_user
@@ -10,11 +10,16 @@ Successful_Login
     Click Button    id=login-button
     Wait Until Element Is Visible   id=inventory_container
 
-Validate_Unsuccssful_Login_Error_Message
+TC02-Unsuccssful Login - Wrong Credentials
     Open Browser    url=https://www.saucedemo.com/    browser=chrome
     Wait Until Element Is Visible    css=[data-test*='login-container']
     Input Text    id=user-name    standard_user
     Input Text    id=password    secret
     Click Button    id=login-button
-    Wait Until Element Is Visible    css=[data-test*='error']
-    Element Should Contain    css=[data-test*='error']    do not match
+    Wait Until Element Contains    css=[data-test*='error']    do not match
+
+TC03-Unsuccssful Login - No Credentials
+    Open Browser    url=https://www.saucedemo.com/    browser=chrome
+    Wait Until Element Is Visible    css=[data-test*='login-container']
+    Click Button    id=login-button
+    Wait Until Element Contains    css=[data-test*='error']    is required
