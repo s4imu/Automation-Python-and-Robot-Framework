@@ -5,3 +5,8 @@ LOGIN_DATA = {
     "wrongCredentialsErrorMessage": "do not match",
     "missingCredentialsErrorMessage": "is required"
 }
+
+URL_DATA = {
+    "baseUrl": "https://www.saucedemo.com",
+    "inventoryUrl": "/inventory"
+}
